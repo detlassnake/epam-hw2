@@ -1,5 +1,6 @@
 public class PlusOneElement {       //Task 4
-    static int[] plusOne(int arr[]) {
+    private int arr[];
+    int[] plusOne() {
         int lastIndex = arr.length - 1;
         arr[lastIndex]++;
         do {
@@ -10,5 +11,11 @@ public class PlusOneElement {       //Task 4
             lastIndex--;
         } while (lastIndex != 0);
         return arr;
+    }
+    public int[] getArr() {
+        return arr;
+    }
+    public void setArr(int[] arr) {
+        this.arr = arr;
     }
 }

@@ -1,5 +1,7 @@
 public class RemoveInstancesValue {     //Task 2
-    static public int removeValue(int[] arr, int value) {
+    private int[] arr;
+    private int value;
+    public int removeValue() {
         int i = 0;
         for (int j = 0; j < arr.length; j++) {
             if (arr[j] != value) {
@@ -9,4 +11,17 @@ public class RemoveInstancesValue {     //Task 2
         }
         return i;
     }
+
+    public void setArr(int[] arr) {
+        this.arr = arr;
+    }
+
+    public int[] getArr() {
+        return arr;
+    }
+
+    public void setValue(int value) {
+        this.value = value;
+    }
+
 }
