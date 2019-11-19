@@ -1,7 +1,12 @@
+package ua.epam.hw2Test;
+
 public class RemoveInstancesValue {     //Task 2
     private int[] arr;
     private int value;
     public int removeValue() {
+        if (arr == null) {
+            return -1;
+        }
         int i = 0;
         for (int j = 0; j < arr.length; j++) {
             if (arr[j] != value) {

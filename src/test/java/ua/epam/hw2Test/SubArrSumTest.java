@@ -1,3 +1,5 @@
+package ua.epam.hw2Test;
+
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
@@ -16,5 +18,12 @@ public class SubArrSumTest {    //Task 1
         sas.setArr(new int[]{});
         result = sas.maxSubArrSum();
         assertEquals(result,Integer.MIN_VALUE);
+    }
+    @Test
+    public void testSubArrSumNullArr() {
+        int[] nullArr = null;
+        sas.setArr(nullArr);
+        result = sas.maxSubArrSum();
+        assertEquals(result,-1);
     }
 }

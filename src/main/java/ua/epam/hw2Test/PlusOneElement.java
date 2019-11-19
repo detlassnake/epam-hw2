@@ -1,6 +1,11 @@
+package ua.epam.hw2Test;
+
 public class PlusOneElement {       //Task 4
     private int arr[];
-    int[] plusOne() {
+    public int[] plusOne() {
+        if (arr == null) {
+            return new int[]{};
+        }
         int lastIndex = arr.length - 1;
         arr[lastIndex]++;
         do {

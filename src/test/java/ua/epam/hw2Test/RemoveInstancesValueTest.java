@@ -1,3 +1,5 @@
+package ua.epam.hw2Test;
+
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
@@ -19,5 +21,13 @@ public class RemoveInstancesValueTest {     //Task 2
         riv.setValue(inputVal);
         result = riv.removeValue();
         assertEquals(result, 0);
+    }
+    @Test
+    public void testRemoveInstancesValueNullArr() {
+        int[]nullArr = null;
+        riv.setArr(nullArr);
+        riv.setValue(inputVal);
+        result = riv.removeValue();
+        assertEquals(result, -1);
     }
 }

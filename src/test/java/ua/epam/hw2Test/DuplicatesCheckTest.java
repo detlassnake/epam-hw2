@@ -1,3 +1,5 @@
+package ua.epam.hw2Test;
+
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
@@ -23,6 +25,13 @@ public class DuplicatesCheckTest {      //Task 5
     @Test
     public void testDuplicatesCheckEmptyArr() {
         dc.setArr(new int[]{});
+        result2 = dc.duplicates();
+        assertEquals(result2, false);
+    }
+    @Test
+    public void testDuplicatesCheckNullArr() {
+        int[] nullArr = null;
+        dc.setArr(nullArr);
         result2 = dc.duplicates();
         assertEquals(result2, false);
     }

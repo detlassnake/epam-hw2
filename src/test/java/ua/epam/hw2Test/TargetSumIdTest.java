@@ -1,3 +1,5 @@
+package ua.epam.hw2Test;
+
 import org.junit.Test;
 import static org.junit.Assert.assertArrayEquals;
 
@@ -19,5 +21,13 @@ public class TargetSumIdTest {   //Task 3
         tsi.setTarget(inputTarget);
         resultArr = tsi.targetSumIndex();
         assertArrayEquals(resultArr, new int[]{0,0});
+    }
+    @Test
+    public void testTargetSumIdNullArr() {
+        int[] nullArr = null;
+        tsi.setArr(nullArr);
+        tsi.setTarget(inputTarget);
+        resultArr = tsi.targetSumIndex();
+        assertArrayEquals(resultArr, new int[]{});
     }
 }

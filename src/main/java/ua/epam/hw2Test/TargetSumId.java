@@ -1,7 +1,12 @@
+package ua.epam.hw2Test;
+
 public class TargetSumId {     //Task 3
     private int[] arr;
     private int target;
-    int[] targetSumIndex() {
+    public int[] targetSumIndex() {
+        if (arr == null) {
+            return new int[]{};
+        }
         int[] indexArr = new int[2];
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr.length; j++) {
